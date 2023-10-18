@@ -21,6 +21,10 @@ public class Basket {
                     new ProductInBasket(product.getProductId(), product.getProductName(), product.getPrice(), quantity));
         }
     }
+    public synchronized void removeProduct(int productId) {
+        elementy.remove(productId);
+    }
+
 
     public synchronized void addProduct(Product product) {
         // "domyślną ilością, o którą zwiększamy, jest 1"
