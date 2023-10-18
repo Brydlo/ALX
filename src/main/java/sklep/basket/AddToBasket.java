@@ -27,9 +27,10 @@ public class AddToBasket extends HttpServlet {
                 HttpSession sesja = request.getSession();
                 Basket basket = (Basket)sesja.getAttribute("basket");
                 // jeśli w sesji nie ma jeszcze obiektu o tej nazwie, to wynikiem jest null
-                if(basket == null) {
-                    basket = new Basket();
-                }
+//                dodano klasę basketListener dlatego nie potrzeba używać if
+//                if(basket == null) {
+//                    basket = new Basket();
+//                }
                 basket.addProduct(product);
                 sesja.setAttribute("basket", basket);
             }
