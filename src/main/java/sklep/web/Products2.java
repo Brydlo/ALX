@@ -1,14 +1,5 @@
 package sklep.web;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,10 +10,13 @@ import sklep.db.DBException;
 import sklep.db.ProductDAO;
 import sklep.model.Product;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 
-@WebServlet("/products1")
-public class Products1 extends HttpServlet {
+@WebServlet("/products2")
+public class Products2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest requets, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
