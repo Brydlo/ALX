@@ -55,3 +55,4 @@
 <div class="action"><a href="edit">Dodaj nowy produkt</a></div>
 </body>
 </html>
+
