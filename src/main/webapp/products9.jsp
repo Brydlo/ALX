@@ -17,7 +17,7 @@
         <%-- Zauważmy, że dla obiektu koszyk nie wykonujemy już useBean.
              Po prostu zakładamy, że jest obecny (w sesji). Gdyby go nie było, to pętla się nie wykona. --%>
         <c:forEach var="elm" items="${basket.elements}">
-            <li>${elm.productName} (${elm.quantity}) za <b>${elm.value}</b></li>
+            <li>${elm.productName} (${elm.quantity}) za <b>${elm.value}</b><a href="remove_rom_basket?productId=${elm.productId}">(X)</a></li>
         </c:forEach>
     </ul>
     <p class="total">Do zapłaty: ${basket.totalValue}</p>
